@@ -7,19 +7,19 @@ A MERN stack-based book library application where users can add, search, and rat
 ## 🛠 Technologies Used  
 
 ### Backend:  
-- **Node.js & Express.js** – API server  
-- **MongoDB & Mongoose** – Database  
-- **JWT & Bcrypt** – Authentication  
-- **Nodemailer** – Email services  
-- **Express-validator** – Input validation  
+- ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) **Node.js & Express.js** – API server  
+- ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) **MongoDB & Mongoose** – Database  
+- ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=json-web-tokens&logoColor=white) **JWT & Bcrypt** – Authentication  
+- ![Nodemailer](https://img.shields.io/badge/Nodemailer-yellow?style=for-the-badge) **Nodemailer** – Email services  
+- ![Validator](https://img.shields.io/badge/Validator-blue?style=for-the-badge) **Express-validator** – Input validation  
 
 ### Frontend:  
-- **React + Vite** – Frontend framework  
-- **Tailwind CSS** – Styling  
-- **React Router** – Navigation  
-- **React Toastify** – Notifications  
-- **Axios** – HTTP requests  
-- **Lucide React** – Icons  
+- ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white) **React + Vite** – Frontend framework  
+- ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) **Tailwind CSS** – Styling  
+- ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) **React Router** – Navigation  
+- ![Toastify](https://img.shields.io/badge/React_Toastify-FF8800?style=for-the-badge&logo=react&logoColor=white) **React Toastify** – Notifications  
+- ![Axios](https://img.shields.io/badge/Axios-blue?style=for-the-badge) **Axios** – HTTP requests  
+- ![Lucide](https://img.shields.io/badge/Lucide-000000?style=for-the-badge) **Lucide React** – Icons  
 
 ---
 
@@ -99,4 +99,3 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## 📜 License  
 This project is licensed under the MIT License.
-
