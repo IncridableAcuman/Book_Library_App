@@ -15,7 +15,8 @@ class BookController{
 
     async getAllBooks(req,res,next){
         try {
-            
+         const books = await bookService.getAllBooks();
+         return res.json(books);   
         } catch (error) {
             next(error);
         }
@@ -23,7 +24,9 @@ class BookController{
 
     async getOneBook(req,res,next){
         try {
-            
+           const {id} = req.params;
+           const book = await bookService.getOneBook(id);
+           return res.json(book); 
         } catch (error) {
             next(error);
         }
