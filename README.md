@@ -79,6 +79,16 @@ SMTP_PASS="your-smtp-password"
 ✔ User authentication (JWT)  
 ✔ Rate books  
 ✔ Email notifications  
+✔ Wishlist – Save books for later reading  
+✔ Mark books as read  
+✔ Leave reviews and comments on books  
+✔ Advanced search and filtering options  
+✔ Real-time notifications using Socket.io  
+✔ Email alerts for new book additions  
+✔ Upload and download book PDFs  
+✔ Dark Mode for better UI/UX  
+✔ User profile management with roles (Admin/User)  
+✔ Book reading statistics and insights  
 
 ---
 
