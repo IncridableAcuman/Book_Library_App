@@ -4,15 +4,11 @@ const Book = require('../models/book.model');
 const BookDTO=require('../dtos/book.dto');
 class BookService{
 
-    async createBook(title,author,description,genre,publishedYear,id){
+    async createBook(title,author,description,genre,coverImage,publishedYear,id){
         if(!title || !author || !description || !genre || !publishedYear){
             throw BaseError.BadRequest("All fields are required");
         }
-        const user=await User.findById(id);
-        if(!user){
-            throw BaseError.NotFound("User not found");
-        }
-        const book = await Book.create({title,author,description,genre,publishedYear,createdBy:user.id});
+        const book = await Book.create({title,author,description,genre,coverImage,publishedYear,createdBy:id});
         const bookDto=new BookDTO(book);
         return bookDto;
     }

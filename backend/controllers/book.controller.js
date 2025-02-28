@@ -4,12 +4,13 @@ class BookController{
 
     async createBook(req,res,next){
         try {
-          const {title,author,description,genre,publishedYear}  = req.body;
-          const {id}=req.body;
-          const book = await bookService.createBook(title,author,description,genre,publishedYear,id);
+          const {title,author,description,genre,publishedYear,coverImage}  = req.body;
+          const {id}=req.user;
+          const book = await bookService.createBook(title,author,description,genre,coverImage,publishedYear,id);
           return res.json(book);
         } catch (error) {
             next(error);
+            console.log(error)
         }
     }
 
