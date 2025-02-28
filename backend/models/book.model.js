@@ -30,7 +30,7 @@ const bookSchema = new Schema({
     reviews:[
         {
             user:{type:Schema.Types.ObjectId,ref:"User"},
-            commet:{type:String},
+            comment:{type:String},
             rating:{type:Number,default:0,min:0,max:5},
             createdAt:{type:Date,default:Date.now}
         }

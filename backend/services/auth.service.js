@@ -106,5 +106,29 @@ class AuthService {
         }
         return new UserDTO(user);
     }
+
+    async getProfile(id){
+        const user = await User.findById(id).populate('favourites','title author genre');
+        if(!user){
+            throw BaseError.NotFound("User not found");
+        }
+        return user;
+    }
+
+    async toggleFavoritesBook(userId,bookId){
+        const user = await User.findById(userId);
+        if(!user){
+            throw BaseError.NotFound("User not found");
+        }
+        const bookIndex=user.favourites.indexOf(bookId);
+        if(bookIndex === -1){
+            user.favourites.push(bookId);
+        } else {
+            user.favourites.slice(bookIndex,1);
+        }
+        await user.save();
+        return user;
+    }
+
 }
 module.exports = new AuthService();

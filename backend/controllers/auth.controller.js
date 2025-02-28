@@ -84,5 +84,26 @@ class AuthController{
             next(error);
         }
     }
+
+    async getProfile(req,res,next){
+        try {
+            const {id} = req.user;
+            const user = await authService.getProfile(id);
+            return res.json(user);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    async toggleFavoritesBook(req,res,next){
+        try {
+            const {bookId} = req.body;
+            const userId=req.user.id;
+            const user = await authService.toggleFavoritesBook(userId,bookId);
+            return res.json(user);
+        } catch (error) {
+            next(error);
+        }
+    }
 }
 module.exports=new AuthController();
