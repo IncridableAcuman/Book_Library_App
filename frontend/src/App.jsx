@@ -1,8 +1,25 @@
-import React from 'react'
-
+import {Routes,Route} from 'react-router-dom'
+import Home from './pages/Home'
+import Auth from './pages/Auth'
+import Login from './pages/Login'
+import Book from './pages/Book'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
+import Profile from './pages/Profile';
+import PrivateRoute from './private/PrivateRoute';
 const App = () => {
   return (
-    <div>App</div>
+    <>
+    <Routes>
+      <Route path='/' element={<PrivateRoute element={<Home/>} />} />
+      <Route path='/auth' element={<Auth/>} />
+      <Route path='/login' element={<Login/>} />
+      <Route path='/books' element={<Book/>} />
+      <Route path='/forgot-password' element={<ForgotPassword/>} />
+      <Route path='/reset-password' element={<ResetPassword/>} />
+      <Route path='/profile' element={<Profile/>} />
+    </Routes>
+    </>
   )
 }
 
